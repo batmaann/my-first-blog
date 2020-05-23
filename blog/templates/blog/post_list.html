@@ -6,11 +6,24 @@
         <div>
             <h1><a href="/">Главная страница блога</a></h1>
         </div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+
 
         <div>
             <p>WARNING! ведутся технические работы, просьба набраться терпения, спасибо</p>
+
+
+
             <h2><a href="">My first post</a></h2>
             <p>Спецальное докозательства для Ивана Грозного, что я не пинаю х@й.</p>
+            {{ posts }}
         </div>
 
         <div>
